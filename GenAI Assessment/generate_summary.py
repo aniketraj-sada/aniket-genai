@@ -10,8 +10,9 @@ import requests
 from bs4 import BeautifulSoup
 from langchain.llms import OpenAI
 from newspaper import Article
+from keys import openai_api_key
 
-os.environ['OPENAI_API_KEY'] = "sk"
+os.environ['OPENAI_API_KEY'] = openai_api_key
 llm = OpenAI(temperature=0.6)
 
 def downloadArticleContent(url):

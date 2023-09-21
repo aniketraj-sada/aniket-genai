@@ -86,7 +86,7 @@ for entry in feed.entries[:10]:
     article_content = downloadArticleContent(entry.link)
     
     # Generate summary using Langchain
-    prompt_template_ = PromptTemplate(
+    prompt_template = PromptTemplate(
         input_variables=["article_content"],
         template=f"Please provide a brief summary of the following article:\n\n{{article_content}}",
         max_tokens=1024,
